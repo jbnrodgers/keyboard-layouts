@@ -22,7 +22,9 @@ enum layer_names {
   _NUMROW,
   _NUMPAD,
   _NAV,
-  _FN
+  _VIM,
+  _MOUS,
+  _FN,
 };
 
 #ifdef OLED_ENABLE
@@ -43,13 +45,19 @@ void render_status(void) {
           oled_write_P(PSTR("COLEMAK-DH\n"), false);
           break;
       case _NUMROW:
-          oled_write_P(PSTR("NUMROW\n"), false);
+          oled_write_P(PSTR("NUM ROW\n"), false);
           break;
       case _NUMPAD:
-          oled_write_P(PSTR("NUMPAD\n"), false);
+          oled_write_P(PSTR("NUM PAD\n"), false);
           break;
       case _NAV:
-          oled_write_P(PSTR("NAV\n"), false);
+          oled_write_P(PSTR("NAVIGATOR\n"), false);
+          break;
+      case _VIM:
+          oled_write_P(PSTR("VIM\n"), false);
+          break;
+      case _MOUS:
+          oled_write_P(PSTR("MOUSE\n"), false);
           break;
       case _FN:
           oled_write_P(PSTR("FN\n"), false);
